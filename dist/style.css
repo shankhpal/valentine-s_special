@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+  position: relative;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background: #eee;
+  font-size: 10px;
+}
+
+.B_heart {
+  -webkit-animation: 1s pulse infinite;
+          animation: 1s pulse infinite;
+  margin: auto;
+  position: relative;
+  width: 40vmax;
+}
+
+.B_heart:before,
+.B_heart:after {
+  background: #ee565a;
+  border-radius: 20vmax 20vmax 4vmax 4vmax;
+  content: "";
+  left: 20vmax;
+  height: 32vmax;
+  position: absolute;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+  width: 20vmax;
+}
+
+.B_heart:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+.face {
+  background: #222;
+  border-radius: 0 0 10vmax 10vmax;
+  border-top: 2vmax solid #fff;
+  display: block;
+  height: 6vmax;
+  left: 14vmax;
+  position: absolute;
+  top: 16vmax;
+  width: 12vmax;
+  z-index: 5;
+}
+
+.face:before, .face:after {
+  background: #222;
+  border-radius: 4vmax;
+  box-shadow: 0 4vmax 0 -0.9vmax #e04e50;
+  content: "";
+  display: block;
+  height: 4vmax;
+  position: absolute;
+  bottom: 8vmax;
+  width: 4vmax;
+  z-index: 5;
+}
+
+.face:before {
+  left: -4vmax;
+}
+
+.face:after {
+  right: -4vmax;
+}
+
+h1 {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 20vmax;
+  font: 700 5vmax "Amatic SC";
+  margin: 10vmax auto 4vmax;
+  padding: 1vw;
+  text-align: center;
+  width: 50vmax;
+  z-index: 5;
+}
+
+h1:after {
+  border: 1vw solid transparent;
+  border-color: transparent #fff #fff transparent;
+  box-shadow: 0.1vmax 0.1vmax #ddd;
+  content: "";
+  display: block;
+  left: 6vmax;
+  position: absolute;
+  transform: rotate(45deg);
+}
+
+@-webkit-keyframes pulse {
+  80% {
+    transform: scale(0.9);
+  }
+}
+
+@keyframes pulse {
+  80% {
+    transform: scale(0.9);
+  }
+}
+
+span {
+color: #9d9da4;
+font-family: monospace;
+}
+.btn-secondary {
+  display: block;
+  margin-left: 150px;
+  text-align: center;
+  background: #ed2553;
+  border-radius: 3px;
+  box-shadow: 0 10px 20px -8px rgb(240, 75, 113);
+  padding: 10px 17px;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  text-decoration: none;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.btn-secondary:hover {
+  transform: translateY(-3px);
+}
+.btn-secondary .fa {
+  margin-right: 5px;
+}
+.animate-like {
+animation-name: likeAnimation;
+animation-iteration-count: 1;
+animation-fill-mode: forwards;
+animation-duration: 0.65s;
+}
+@keyframes likeAnimation {
+0%   { transform: scale(30); }
+100% { transform: scale(1); }
+}
+
